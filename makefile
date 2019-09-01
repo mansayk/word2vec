@@ -1,6 +1,7 @@
 CC = gcc
 #Using -Ofast instead of -O3 might result in faster code, but is supported only by newer GCC versions
-CFLAGS = -lm -pthread -Ofast -march=native -Wall -funroll-loops -Wno-unused-result
+#CFLAGS = -lm -pthread -Ofast -march=native -Wall -funroll-loops -Wno-unused-result
+CFLAGS = -lm -pthread -O2 -march=native -Wall -funroll-loops -Wno-unused-result
 
 all: word2vec word2phrase distance word-analogy compute-accuracy
 
@@ -11,7 +12,8 @@ word2phrase : word2phrase.c
 distance : distance.c
 	$(CC) distance.c -o distance $(CFLAGS)
 distanceio : distanceio.c
-	$(CC) distanceio.c jsmn/jsmn.c -o distanceio $(CFLAGS)
+	#$(CC) distanceio.c jsmn/jsmn.c -o distanceio $(CFLAGS)
+	$(CC) distanceio.c -o distanceio $(CFLAGS)
 word-analogy : word-analogy.c
 	$(CC) word-analogy.c -o word-analogy $(CFLAGS)
 compute-accuracy : compute-accuracy.c
