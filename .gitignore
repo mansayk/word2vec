@@ -12,10 +12,12 @@ jsmn/*.h
 b64/*.c
 b64/*.h
 
-fastmorph
-fastngrams
-
-credentials.h
+compute-accuracy
+distance
+distanceio
+word2phrase
+word2vec
+word-analogy
 
 *.doc
 *.docx
