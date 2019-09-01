@@ -1,5 +1,3 @@
-jsmn.h and jsmn.c files should be placed in this directory!
-
-https://github.com/zserge/jsmn
-
-git clone https://github.com/zserge/jsmn.git
+# jsmn.h file should be placed in this directory!
+# git clone https://github.com/zserge/jsmn.git .
+curl https://raw.githubusercontent.com/zserge/jsmn/master/jsmn.h -o jsmn.h
